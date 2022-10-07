@@ -3,7 +3,7 @@ pipeline{
       stages{
         stage('git checkout'){
         steps{
-        git clone https://github.com/satya-sairam/new_terraform.git
+        git 'https://github.com/satya-sairam/new_terraform.git'
         sh ls
         echo 'hello world'
         }
