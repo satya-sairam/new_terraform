@@ -4,7 +4,7 @@ pipeline{
         stage('git checkout'){
         steps{
          echo 'hello world'
-         sh ls
+         git clone "https://github.com/satya-sairam/new_terraform.git"
         }
 }
 }
