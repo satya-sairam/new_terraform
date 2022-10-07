@@ -5,7 +5,7 @@ pipeline{
         steps{
          echo 'hello world'
          echo 'bye'
-          env
+         echo "hi again"
         }
 }
 }
