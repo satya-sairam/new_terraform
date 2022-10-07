@@ -4,7 +4,7 @@ pipeline{
         stage('git checkout'){
         steps{
 
-         ls
+
          echo 'hello world'
         }
 }
