@@ -1,0 +1,12 @@
+pipeline{
+    agent any
+      stages{
+        stage('git checkout'){
+        steps{
+        sh git clone https://github.com/satya-sairam/new_terraform.git
+        sh ls
+        echo 'hello world'
+        }
+}
+}
+}
