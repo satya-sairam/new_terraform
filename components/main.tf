@@ -7,3 +7,7 @@ resource "aws_instance" "web" {
     Name         = element(var.components,count.index )
   }
 }
+
+provider "aws" {
+  region = "us-east-1"
+}
