@@ -13,7 +13,7 @@ pipeline{
         stage('terraform apply'){
                 steps{
                  sh '''
-
+                   cd components;
                   terraform apply -auto-approve;
                    env
                  '''
