@@ -1,0 +1,26 @@
+pipeline{
+   agent any
+
+   environment{
+     AWS_ACCESS_KEY_ID= credentials('terraform_id')
+     AWS_SECRET_ACCESS_KEY = credentials('terraform_id')
+   }
+
+   stages{
+   stage("terraform init"){
+    sh '''
+     cd components
+     terraform init
+     terraform plan
+    '''
+   }
+   stage("terraform apply"){
+       sh '''
+        terraform apply -auto-approve
+       '''
+      }
+   }
+
+
+
+}
