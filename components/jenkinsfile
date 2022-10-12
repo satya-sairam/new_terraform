@@ -10,16 +10,17 @@ pipeline{
    stage("terraform init"){
     sh '''
      cd components
+     ls
      terraform init
      terraform plan
     '''
    }
-   stage("terraform apply"){
+   /*stage("terraform apply"){
        sh '''
         terraform apply -auto-approve
        '''
       }
-   }
+   }*/
    stage("terraform destroy"){
           sh '''
            terraform destroy -auto-approve
