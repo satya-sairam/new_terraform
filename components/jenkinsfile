@@ -12,6 +12,8 @@ pipeline{
      echo "hello satya"
      terraform init
      terraform destroy -auto-approve
+
+     echo "hello world"
     '''
    }
    }
