@@ -9,6 +9,7 @@ pipeline{
      cd components
      ls
      echo "hello world"
+     echo "hello satya"
      terraform init
      terraform destroy -auto-approve
     '''
