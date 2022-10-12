@@ -23,6 +23,7 @@ pipeline{
    stage("terraform destroy"){
           sh '''
            terraform destroy -auto-approve
+           echo "hello world"
           '''
          }
       }
