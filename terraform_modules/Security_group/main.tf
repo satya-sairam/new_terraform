@@ -1,4 +1,4 @@
-resource "aws_security_group" "my_sg" {
+resource "aws_security_group" "mysg" {
   name        = "ALLOW"
   description = "ALLOW"
   vpc_id      = "vpc-0339245704e9d28ab"
@@ -26,5 +26,5 @@ resource "aws_security_group" "my_sg" {
 
 
 output "sg_id" {
-  value = aws_security_group.my_sg.id
+  value = aws_security_group.mysg.id
 }
