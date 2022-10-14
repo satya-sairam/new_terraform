@@ -1,6 +1,6 @@
 module "ec2"{
   source = "./ec2"
-  SG_ID_FROM_MODULE = "module.vpc.vpc_id"
+  SG_ID_FROM_MODULE = module.sg.sg_id
 }
 
 module "sg"{
