@@ -18,6 +18,7 @@ pipeline{
                        mv target/*.jar shipping.jar
                        echo hello world
                         docker run  nginx
+
                                '''
                      }
                  }
