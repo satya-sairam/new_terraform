@@ -13,6 +13,8 @@ pipeline{
                  steps{
                      sh'''
                        ls
+                       cd shipping
+                       ls
                        mv target/*.jar shipping.jar
                        echo hello world
                                '''
