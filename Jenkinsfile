@@ -1,24 +1,24 @@
 pipeline{
     agent any
-      stages{
-        stage('terraform init'){
-          steps{
-            sh '''
-             cd components;
-             terraform init;
-
-         '''
-        }
-        }
-        stage('terraform apply'){
+        stages{
+            stage('shipping checkout'){
                 steps{
-                 sh '''
-                   cd components;
-                  terraform apply -auto-approve;
-                   env
-                 '''
+                   sh'''
+                      cd shipping
+                      mvn clean package
+                   '''
                 }
             }
-          }
+            stage('echo hello'){
+                 steps{
+                     sh'''
+                       mv target/*.jar shipping.jar
+                       echo hello world
+                               '''
+                     }
+                 }
 
+
+
+        }
 }
